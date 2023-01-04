@@ -5,7 +5,14 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+
+__source_file=${BASH_SOURCE[0]}
+while [ -L "$__source_file" ]; do # follow any symlinks
+    __source_file=$(readlink "${__source_file}")
+done
+__source_file=$(dirname -- "${__source_file}")
+for file in .{path,bash_prompt,exports,aliases,functions,extra}; do
+    file="${__source_file}/${file}"
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
