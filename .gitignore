@@ -1,0 +1,39 @@
+# See http://help.github.com/ignore-files/ for more about
+# ignoring files.
+#
+# If you find yourself ignoring temporary files generated
+# by your text editor or operating system, you probably
+# want to add a global ignore instead:
+#   git config --global core.excludesfile ~/.gitignore_global
+#
+# NOTE! Please use 'git ls-files -i --exclude-standard'
+# command after changing this file, to see if there are
+# any tracked files which get ignored after the change.
+#
+#
+
+# Numerous always-ignore extensions
+*.patch
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+
+# Vim session file
+Session.vim
+
+#
+!.gitignore
+!.aliases
+!.bash_profile
+!.bash_prompt
+!.exports
+!.functions
+!.gitignore
+!.path
+

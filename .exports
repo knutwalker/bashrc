@@ -3,7 +3,7 @@
 # Make neovim the default editor.
 export EDITOR='nvim';
 
-# Open neovim in insert mode for git git
+# Open neovim in insert mode for git
 export GIT_EDITOR='nvim -c startinsert';
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
