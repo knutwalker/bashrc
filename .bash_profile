@@ -34,8 +34,11 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]]; then
+	. "/opt/homebrew/etc/profile.d/bash_completion.sh"
+elif [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]]; then
+	. "/usr/local/etc/profile.d/bash_completion.sh"
+fi
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
