@@ -56,6 +56,9 @@ alias gir="git"
 alias steep="env HOMEBREW_INSTALL_BADGE=🍵 brew"
 # alias intelsteep="arch -x86_64 env HOMEBREW_INSTALL_BADGE=🍵 /usr/local/bin/brew"
 
+# Use nvim to paste the clipboard into a file
+alias paste-to="nvim --headless --clean --noplugin -Es --cmd 'normal \"+pZZ'"
+
 # Replacements
 # Inspired by https://remysharp.com/2018/08/23/cli-improved
 
