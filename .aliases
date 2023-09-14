@@ -39,6 +39,7 @@ alias gr="./gradl"
 # alias za="zellij attach"
 # alias zn="zellij --session"
 alias z="$HOME/bin/tmux-sessionizer"
+alias zz="$HOME/bin/tmux-session-lister"
 
 # Typos
 alias whoch='which'
