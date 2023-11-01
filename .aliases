@@ -62,13 +62,13 @@ alias paste-to="nvim --headless --clean --noplugin -Es --cmd 'normal \"+pZZ'"
 # Replacements
 # Inspired by https://remysharp.com/2018/08/23/cli-improved
 
-## ls -> exa
-## https://github.com/ogham/exa
+## ls -> eza
+## https://github.com/eza-community/eza
 
-alias ls='exa --classify --group-directories-first --time-style=long-iso'
+alias ls='eza --classify --group-directories-first --time-style=long-iso'
 
 ## List files one line at a time
-alias l1="exa --group-directories-first --oneline"
+alias l1="eza --group-directories-first --oneline"
 
 ### List files in long format, excluding things that are .gitignored
 alias l0="ls --long --git-ignore"
@@ -89,7 +89,7 @@ alias la="ls --long --all"
 alias lla="ls --long --git --all"
 
 ### List only directories
-alias lsdir="exa --time-style=long-iso --long --only-dirs"
+alias lsdir="eza --time-style=long-iso --long --only-dirs"
 
 # Lazygit
 alias lg="lazygit"
