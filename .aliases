@@ -250,21 +250,10 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 # JVM switching
-alias j6='jdk 6 && java -version'
-alias j7='jdk 7 && java -version'
-alias j8='jdk 8 && java -version'
-alias j9='jdk 9 && java -version'
-alias j10='jdk 10 && java -version'
 alias j11='jdk 11 && java -version'
-alias j12='jdk 12 && java -version'
-alias j13='jdk 13 && java -version'
-alias j14='jdk 14 && java -version'
-alias j15='jdk 15 && java -version'
-alias j16='jdk 16 && java -version'
 alias j17='jdk 17 && java -version'
-alias j18='jdk 18 && java -version'
-alias j19='jdk 19 && java -version'
-alias j20='jdk 20 && java -version'
+alias j21='jdk 21 && java -version'
+alias j23='jdk 23 && java -version'
 # alias jg='sdk offline enable > /dev/null && sdk use java graal > /dev/null && sdk offline disable > /dev/null && java -version'
 
 
