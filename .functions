@@ -330,6 +330,3 @@ function git-delete-merged-force() {
 	  # remove all in one go
 	  xargs -0 git branch --delete --force
 }
-
-# Github Copilot CLI -- https://www.npmjs.com/package/@githubnext/github-copilot-cli
-eval "$(github-copilot-cli alias -- "$0")"
