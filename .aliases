@@ -89,6 +89,9 @@ alias lla="ls --long --git --all"
 ### List only directories
 alias lsdir="eza --time-style=long-iso --long --only-dirs"
 
+### List files as tree
+alias tree="eza --git-ignore --tree"
+
 # Lazygit
 alias lg="lazygit"
 # The next two mirror the nvim keybindings for invoking lazygit
