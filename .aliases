@@ -36,8 +36,8 @@ alias ogvim="/opt/homebrew/bin/vim"
 alias gw="./gradlew"
 alias gr="./gradl"
 alias t="tmux"
-alias z="$HOME/bin/tmux-sessionizer"
-alias zz="$HOME/bin/tmux-session-lister"
+alias z="sessionizer --quiet"
+alias zz="sessionizer --quiet --tmux-only"
 
 # Typos
 alias whoch='which'
