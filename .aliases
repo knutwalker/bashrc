@@ -94,6 +94,9 @@ alias lg="lazygit"
 alias ly="lazygit"
 alias lz="lazygit"
 
+# Lazydocker
+alias ld="lazydocker"
+
 ## cat -> bat
 ## https://github.com/sharkdp/bat
 alias cat='bat --plain --theme=TwoDark'
