@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Fuzzy find a directory and enter it
+function d() {
+	local dir=$(fd . "${HOME}" --exclude "${HOME}/Library/" --type d --max-depth=3 --color=never | fzf --select-1 --query "${*}");
+	echo "Jumping to ${dir}";
+	cd "${dir}" || return;
+	ls -l
+}
+
 # Create a new directory and enter it
 function md() {
 	mkdir -p "$@" && cd "$_";
