@@ -37,3 +37,5 @@ Session.vim
 !.gitignore
 !.path
 
+# Explicitly ignore the .extra file
+.extra
