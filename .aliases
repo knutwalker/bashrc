@@ -34,6 +34,7 @@ alias gr="./gradl"
 alias t="tmux"
 alias z="sessionizer --quiet"
 alias zz="sessionizer --quiet --tmux-only"
+alias cdsessionroot='cd $SESSION_ROOT'
 
 # Typos
 alias whoch='which'
