@@ -98,7 +98,3 @@ export SCCACHE_CACHE_SIZE="100G"
 # Go PATH because ~/go is... weird
 export GOPATH="${HOME}/.go"
 
-# colima
-# export DOCKER_HOST="unix://${HOME}/.colima/true/docker.sock"
-# export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
-# export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
