@@ -12,6 +12,9 @@ export PYTHONIOENCODING='UTF-8';
 # Always be able to cd from any of those directories
 export CDPATH=".:~:~/dev:~/dev/rust:~/dev/neo"
 
+# Configure paths for sessionizer
+export SESSIONIZER_PATH="~/.bash.rc:~/.config/*:~/dev/*/*"
+
 # Don't autocomplete Cargo.lock files
 # https://www.gnu.org/software/bash/manual/bash.html#index-FIGNORE
 export FIGNORE=argo.lock
