@@ -242,7 +242,7 @@ alias afk="osascript -e 'tell app \"System Events\" to key code 12 using {contro
 [ -x /usr/local/bin/git ] && alias git='/usr/local/bin/git'
 
 # presentation mode
-alias presentation-mode-enter='alacritty msg config font.size=24 && tmux set-option status off'
+alias presentation-mode-enter='alacritty msg config font.size=36 && tmux set-option status off'
 alias presentation-mode-exit='tmux set-option status on && alacritty msg config --reset'
 
 # Refresh htop every second (every 10 100ms units)
