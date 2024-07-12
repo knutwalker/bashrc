@@ -10,11 +10,19 @@
 # Original little snitch path
 # This is added by '/etc/paths.d/at.obdev.littlesnitch'
 # and that file needs to be removed on every update from LS
-# The files are added via symlink in ~~/bin 
+# The files are added via symlink in ~~/bin
 # /Applications/Little Snitch.app/Contents/Components
 
 # Add Zig installation
 #PATH="${HOME}/dev/ziglang/current:$PATH";
+
+# Add ~/.local/bin
+PATH="$HOME/.local/bin:$PATH";
+
+# Add x86_64 cargo binaries
+PATH="$HOME/.x86_64/.cargo/bin:$PATH";
+# Add aarch64 cargo binaries
+PATH="$HOME/.cargo/bin:$PATH";
 
 # Add x86_64 brew directories
 PATH="/usr/local/bin:/usr/local/sbin:$PATH";
@@ -23,11 +31,6 @@ PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH";
 
 # Add Go installation (see .export for GOPATH)
 PATH="${HOME}/.go/bin:$PATH";
-
-# Add x86_64 cargo binaries
-PATH="$HOME/.x86_64/.cargo/bin:$PATH";
-# Add aarch64 cargo binaries
-PATH="$HOME/.cargo/bin:$PATH";
 
 # Add ~/bin
 PATH="$HOME/bin:$PATH";
