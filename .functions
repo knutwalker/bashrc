@@ -220,17 +220,6 @@ function o() {
 	fi;
 }
 
-# `s` with no arguments opens the current directory in Sublime Text, otherwise
-# opens the given location
-function s() {
-	if [ $# -eq 0 ]; then
-		subl .
-	else
-		subl "$@"
-	fi
-}
-
-
 # `e` with no arguments opens the current directory in Visual studio Code, otherwise
 # opens the given location
 function e() {
@@ -244,15 +233,6 @@ function e() {
 		nvim "$@"
 	fi
 }
-
-# `z` with no arguments opens the zoxide db in fzf, otherwise it jumps to the zoxide directory
-# function z() {
-# 	if [ $# -eq 0 ]; then
-# 		__zoxide_zi "$@"
-# 	else
-# 		__zoxide_z "$@"
-# 	fi
-# }
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
