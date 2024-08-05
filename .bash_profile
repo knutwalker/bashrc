@@ -1,11 +1,6 @@
-# See https://www.iterm2.com/3.3/documentation-scripting-fundamentals.html
-# test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-# [ -r "${HOME}/.iterm2_user_vars" ] && [ -f "${HOME}/.iterm2_user_vars" ] && source "${HOME}/.iterm2_user_vars";
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-
 __source_file=${BASH_SOURCE[0]}
 while [ -L "$__source_file" ]; do # follow any symlinks
     __source_file=$(readlink "${__source_file}")
@@ -52,7 +47,4 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash
 
 # SDKMAN init
-[[ -z "${SDKMAN_PLATFORM}" ]] && [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
-
-# Zellij init
-# [ -f "${HOME}/.zellij.bash" ] && source "${HOME}/.zellij.bash"
+# [[ -z "${SDKMAN_PLATFORM}" ]] && [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"

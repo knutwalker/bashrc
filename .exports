@@ -60,33 +60,14 @@ export CARGO_INSTALL_OPTS="--color auto"
 # https://stackoverflow.com/a/42265848/96656
 # export GPG_TTY=$(tty);
 
-# Install Nord dircolors
-# Based of https://www.nordtheme.com/docs/ports/dircolors/installation
-# With changes so that it runs on this system
-# test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
-
-# Shell Bookmarks
-# http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
-# export MARKPATH=$HOME/.marks
-
 # https://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before-2/
 # Use RipGrep for better search
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --base-directory="${HOME}/dev" --absolute-path --type d"
-# bind -x '"\C-x\C-p": vim $(fzf);'
-
-# fw: https://github.com/brocode/fw/blob/b797b3c51e1400400b2d9b5c2b602b7c733e4f5b/doc/installation.org
-# if [[ -x "$(command -v fw)" ]]; then
-#   if [[ -x "$(command -v fzf)" ]]; then
-#     eval "$(fw print-bash-setup -f 2>/dev/null)"
-#   else
-#     eval "$(fw print-bash-setup 2>/dev/null)"
-#   fi
-# fi
 
 # SDKMAN
-export SDKMAN_DIR="${HOME}/.sdkman"
+# export SDKMAN_DIR="${HOME}/.sdkman"
 
 # Rm ImProved
 # https://github.com/nivekuil/rip#-notes

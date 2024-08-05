@@ -251,24 +251,6 @@ function tabname() {
 	fi
 }
 
-# Shell Bookmarks
-# http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
-# function jump {
-# 	cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
-# }
-
-# function mark {
-# 	mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
-# }
-
-# function unmark {
-# 	rm -i "$MARKPATH/$1"
-# }
-
-# function marks {
-# 	\ls -l "$MARKPATH" | tail -n +2 | sed 's/  / /g' | cut -d' ' -f9- | awk -F ' -> ' '{printf "%-10s -> %s\n", $1, $2}'
-# }
-
 # https://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before-2/#update
 fzf_log() {
 	hash=$(git log --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" | fzf --ansi | awk '{print $1}')
@@ -276,16 +258,6 @@ fzf_log() {
 	git showtool $hash
 }
 
-
-# switch to a Java version with fuzzy selection
-# requires the following binaries
-#  * https://github.com/sharkdp/fd
-#  * https://github.com/junegunn/fzf
-#  * fzf-tmux wrapper from https://github.com/junegunn/fzf/blob/master/bin/fzf-tmux
-#function jdk() {
-#	IFS=$'\n' version=$(fd --exact-depth=1 --type=directory --search-path="${SDKMAN_CANDIDATES_DIR}/java" --exec echo {/} | sort --version-sort | fzf-tmux -- --exit-0 --query="$1")
-#	[[ -n "$version" ]] && sdk use java $version
-#}
 
 function jdk() {
 	eval $(jdkman "$@");

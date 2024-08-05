@@ -43,20 +43,8 @@ alias gut="git"
 alias got="git"
 alias gir="git"
 
-# Managing two archs
-# alias intelbrew="arch -x86_64 /usr/local/bin/brew"
-# alias intelcargo="arch -x86_64 env HOME=/Users/knut/.x86_64 /Users/knut/.x86_64/.cargo/bin/cargo"
-# alias intelrustup="arch -x86_64 env HOME=/Users/knut/.x86_64 /Users/knut/.x86_64/.cargo/bin/rustup"
-# alias intelrs="arch -x86_64 env HOME=/Users/knut/.x86_64 PATH=/Users/knut/.x86_64/.cargo/bin:$PATH CARGO_HOME=/Users/knut/.x86_64/.cargo RUSTUP_HOME=/Users/knut/.x86_64/.rustup"
-# https://twitter.com/emorydunn/status/1345443732154245121
-alias steep="env HOMEBREW_INSTALL_BADGE=🍵 brew"
-# alias intelsteep="arch -x86_64 env HOMEBREW_INSTALL_BADGE=🍵 /usr/local/bin/brew"
-
 # Use nvim to paste the clipboard into a file
 alias paste-to="nvim --headless --clean --noplugin -Es --cmd 'normal \"+pZZ'"
-
-# Replacements
-# Inspired by https://remysharp.com/2018/08/23/cli-improved
 
 ## ls -> eza
 ## https://github.com/eza-community/eza
@@ -90,15 +78,6 @@ alias lsdir="eza --time-style=long-iso --long --only-dirs"
 ### List files as tree
 alias tree="eza --git-ignore --tree"
 
-# Lazygit
-alias lg="lazygit"
-# The next two mirror the nvim keybindings for invoking lazygit
-alias ly="lazygit"
-alias lz="lazygit"
-
-# Lazydocker
-alias ld="lazydocker"
-
 ## cat -> bat
 ## https://github.com/sharkdp/bat
 alias cat='bat --plain --theme=TwoDark'
@@ -108,6 +87,14 @@ alias ogcat='command cat'
 ## https://github.com/denilsonsa/prettyping
 alias ping='prettyping'
 
+# Lazygit
+alias lg="lazygit"
+# The next two mirror the nvim keybindings for invoking lazygit
+alias ly="lazygit"
+alias lz="lazygit"
+
+# Lazydocker
+alias ld="lazydocker"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -121,9 +108,6 @@ alias lsof='lsof -nP'
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# CATAAS
-alias cataas='curl -so- https://cataas.com/c | imgcat'
-
 # Doge mode (`such git`)
 alias such=' '
 
@@ -135,14 +119,6 @@ alias httpv='http -pHhBb'
 
 # Get week number
 alias week='date +%V'
-
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-# alias update='brew update; brew upgrade; brew cleanup;'
-# alias brupdate='update'
-
-# Google Chrome
-# alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-# alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 
 # IP addresses
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -176,9 +152,9 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # JavaScriptCore REPL
-# jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc";
-# [ -e "${jscbin}" ] && alias jsc="${jscbin}";
-# unset jscbin;
+jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers/jsc";
+[ -e "${jscbin}" ] && alias jsc="${jscbin}";
+unset jscbin;
 
 # Trim new lines and copy to clipboard
 alias ctrlc="tr -d '\n' | pbcopy"
@@ -186,14 +162,9 @@ alias ctrlc="tr -d '\n' | pbcopy"
 # Recursively delete `.DS_Store` files
 alias cleanup="find . \( \( -type d -name target \) -or \( -type d -name build \) -or \( -type d -name node_modules \) -or \( -type f -name '*.DS_Store' \) \) -exec rm -r {} \;"
 
-# Empty the Trash on all mounted volumes and the main HDD.
-# Also, clear Apple’s System Logs to improve shell startup speed.
-# Finally, clear download history from quarantine. https://mths.be/bum
-# alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -214,9 +185,6 @@ alias spoton="sudo mdutil -a -i on"
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
 alias plistbuddy="/usr/libexec/PlistBuddy"
 
-# Airport CLI alias
-alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
-
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
 # find . -name .gitattributes | map dirname
@@ -231,16 +199,12 @@ done
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume output volume 100'"
 
-# Kill all the tabs in Chrome to free up memory
-# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-# alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
-
 # Lock the screen (when going AFK)
 # Update from https://github.com/mathiasbynens/dotfiles/pull/946
 alias afk="osascript -e 'tell app \"System Events\" to key code 12 using {control down, command down}'"
 
-# default options for some binaries
-[ -x /usr/local/bin/git ] && alias git='/usr/local/bin/git'
+# # default options for some binaries
+# [ -x /usr/local/bin/git ] && alias git='/usr/local/bin/git'
 
 # presentation mode
 alias presentation-mode-enter='alacritty msg config font.size=36 && tmux set-option status off'
@@ -260,8 +224,6 @@ alias j11='jdk 11 && java -version'
 alias j17='jdk 17 && java -version'
 alias j21='jdk 21 && java -version'
 alias j23='jdk 23 && java -version'
-# alias jg='sdk offline enable > /dev/null && sdk use java graal > /dev/null && sdk offline disable > /dev/null && java -version'
-
 
 # move with rsync, use rmove -z /a /b to enable gzip for full speedup when downloading text files from servers
 alias rmove="rsync --remove-source-files -Phav  --exclude .git --exclude .idea"
@@ -269,9 +231,3 @@ alias rmove-all="rsync --remove-source-files -Phav"
 alias rcopy="rsync -Phav --exclude .git --exclude .idea"
 alias rcopy-all="rsync -Phav"
 
-# clean up cached ssh connections
-alias ssh_unshare="ps ax | grep ssh | grep ssh_persist | grep -v grep |  awk '{print \$1}' | xargs -r kill"
-
-# stats infos
-# alias hot='macstats cpu'
-# alias fast='macstats fan'
