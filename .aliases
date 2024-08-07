@@ -70,7 +70,7 @@ alias llg="ls --long --git"
 alias la="ls --long --all"
 
 ### List all files long format, including git status, excluding . and ..
-alias lla="ls --long --git --all"
+alias lag="ls --long --git --all"
 
 ### List only directories
 alias lsdir="eza --time-style=long-iso --long --only-dirs"
