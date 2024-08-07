@@ -82,3 +82,6 @@ export SCCACHE_CACHE_SIZE="100G"
 # Go PATH because ~/go is... weird
 export GOPATH="${HOME}/.go"
 
+# Avoid ssh agent spawning new instances on every invocation
+export SSH_AUTH_SOCK="${HOME}/.ssh/ssh-agent.sock"
+

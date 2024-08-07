@@ -225,6 +225,17 @@ function jdk() {
 	eval $(jdkman "$@");
 }
 
+function _start_ssh_agent() {
+    # Avoid ssh agent spawning new instances on every shell
+    local ssh_agent_out=$(ssh-agent -a $SSH_AUTH_SOCK -s 2>/dev/null)
+    if [ $? -eq 0 ]; then
+        eval $ssh_agent_out > /dev/null
+    else
+        SSH_AGENT_PID=$(pgrep ssh-agent)
+        export SSH_AGENT_PID;
+    fi
+}
+
 # Offer merged branches for deletion
 function git-delete-merged() {
 	# list branches that are merged when viewed from the current branch or whatever branch is given as the first argument
