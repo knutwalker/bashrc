@@ -96,6 +96,10 @@ alias lz="lazygit"
 # Lazydocker
 alias ld="lazydocker"
 
+# Bottom is the new htop
+alias btop='btm --config_location ~/.config/bottom/bottom_default.toml --basic'
+alias btm_clean='btm --config_location ~/.config/bottom/bottom_default.toml'
+
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'
