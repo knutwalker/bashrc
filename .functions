@@ -182,18 +182,32 @@ function o() {
 	fi;
 }
 
-# `e` with no arguments opens the current directory in Visual studio Code, otherwise
-# opens the given location
+# `e` with no arguments opens the current directory, otherwise opens the given
+# location
 function e() {
 	if [ $# -eq 0 ]; then
-        if [ -f Session.vim ]; then
-            nvim -S Session.vim
-        else
-            nvim .
-        fi
+		if [ -f Session.vim ]; then
+			nvim -S Session.vim
+		else
+			nvim .
+		fi
 	else
 		nvim "$@"
 	fi
+}
+
+# `ee` opens the file picked by fzf
+function ee() {
+	local open_target=($(fd --type f --follow --hidden --no-ignore --exclude .git/ \
+		| fzf \
+		--header 'Open a file' \
+		--preview 'bat --number --color=always --paging never --theme=TwoDark {+1}' \
+		--bind "ctrl-y:execute-silent(echo {} | pbcopy)+abort" \
+		--query="$@" \
+		--multi \
+		--select-1 \
+		--exit-0))
+	test "${open_target}" && "${EDITOR}" "${open_target[@]}"
 }
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
