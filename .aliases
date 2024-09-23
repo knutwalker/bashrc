@@ -33,8 +33,8 @@ alias gw="./gradlew"
 alias gr="./gradl"
 alias s="swift"
 alias t="tmux"
-alias z="sessionizer --quiet"
-alias zz="sessionizer --quiet --tmux-only"
+alias z="zig"
+alias zz="zig build"
 alias cdsessionroot='cd $SESSION_ROOT'
 
 # Typos
