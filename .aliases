@@ -5,8 +5,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
 
 # Shortcuts
 alias b="bacon"
@@ -112,9 +110,6 @@ alias lsof='lsof -nP'
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Doge mode (`such git`)
-alias such=' '
-
 # Longer timeout with HTTPie
 alias http='http --timeout 300'
 
@@ -156,9 +151,7 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # JavaScriptCore REPL
-jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers/jsc";
-[ -e "${jscbin}" ] && alias jsc="${jscbin}";
-unset jscbin;
+alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers/jsc";
 
 # Trim new lines and copy to clipboard
 alias ctrlc="tr -d '\n' | pbcopy"
@@ -194,11 +187,6 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
 
-# One of @janmoesen’s ProTip™s
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-	alias "${method}"="lwp-request -m '${method}'"
-done
-
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume output volume 100'"
@@ -216,12 +204,6 @@ alias presentation-mode-exit='tmux set-option status on && alacritty msg config 
 
 # Refresh htop every second (every 10 100ms units)
 alias htop='sudo htop -d 10'
-
-# Reload the shell (i.e. invoke as a login shell)
-alias reload="exec ${SHELL} -l"
-
-# Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
 
 # JVM switching
 alias j11='jdk 11 && java -version'
