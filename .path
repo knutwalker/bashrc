@@ -3,7 +3,6 @@ function __set_path() {
     local path_items=(
         "$HOME/.local/bin"              # Add ~/.local/bin and ~/bin
         "$HOME/bin"                     # --''--
-        "$HOME/.local/share/mise/shims" # Add mise shims
         "$HOME/.cargo/bin"              # Add aarch64 cargo binaries
         "/opt/homebrew/bin"             # Add aarch64 brew directories
         "/opt/homebrew/sbin"            # --''--
