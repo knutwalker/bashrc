@@ -85,3 +85,5 @@ export GOPATH="${HOME}/.go"
 # Avoid ssh agent spawning new instances on every invocation
 export SSH_AUTH_SOCK="${HOME}/.ssh/ssh-agent.sock"
 
+# Disable prompt manipulation by venv
+VIRTUAL_ENV_DISABLE_PROMPT=1
