@@ -7,33 +7,35 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Shortcuts
+alias asd='git hunks && gc'
 alias b="bacon"
 alias c="cargo"
+alias cdsessionroot='cd $SESSION_ROOT'
 alias g="git"
+alias ga='git ap'
+alias gac='git ap && gc'
+alias gc="git commit --verbose"
+alias gca='git ap && gc'
+alias gg="git status -sb"
+alias gr="./gradl"
+alias gs="git status"
+alias gw="./gradlew"
 alias h="history"
 alias j="just"
-alias js="jq '.'"
 alias jj="jq -C '.' | less -R"
+alias js="jq '.'"
 alias n="cargo +nightly"
-alias op="openport"
-alias gg="git status -sb"
-alias gs="git status"
-alias ga='git ap'
-alias gc="git commit --verbose"
-alias gac='git ap && gc'
-alias gca='git ap && gc'
-alias asd='git hunks && gc'
-alias vi="nvim"
-alias vim="nvim"
-alias view="nvim -R"
 alias ogvim="/opt/homebrew/bin/vim"
-alias gw="./gradlew"
-alias gr="./gradl"
+alias op="openport"
 alias s="swift"
 alias t="tmux"
+alias tim='/usr/bin/time -lp'
+alias timelp='/usr/bin/time -lp'
+alias vi="nvim"
+alias view="nvim -R"
+alias vim="nvim"
 alias z="zig"
-alias zz="zig build"
-alias cdsessionroot='cd $SESSION_ROOT'
+alias zz="zig build -freference-trace=1337"
 
 # Typos
 alias whoch='which'
