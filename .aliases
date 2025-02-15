@@ -38,7 +38,6 @@ alias view="nvim -R"
 alias vim="nvim"
 alias z="zig"
 alias zz="zig build -freference-trace=1337"
-alias zigup='zigup --install-dir ~/.local/share/zigup/installs --path-link ~/.local/share/zigup/path/zig'
 
 # Typos
 alias whoch='which'
