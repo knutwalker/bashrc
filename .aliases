@@ -37,7 +37,7 @@ alias vi="nvim"
 alias view="nvim -R"
 alias vim="nvim"
 alias z="zig"
-alias zz="zig build -freference-trace=1337"
+alias zz="zig build -freference-trace=1337 --prominent-compile-errors"
 
 # Typos
 alias whoch='which'
