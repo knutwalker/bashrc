@@ -221,3 +221,5 @@ alias rmove-all="rsync --remove-source-files -Phav"
 alias rcopy="rsync -Phav --exclude .git --exclude .idea"
 alias rcopy-all="rsync -Phav"
 
+# serve local directory
+alias serve="miniserve --index index.html ."
