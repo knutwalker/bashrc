@@ -31,6 +31,7 @@ alias o="open ."
 alias ogvim="/opt/homebrew/bin/vim"
 alias op="openport"
 alias s="swift"
+alias ss="sessionizer --shell"
 alias t="tmux"
 alias tim='/usr/bin/time -lp'
 alias timebin='/usr/bin/time'
