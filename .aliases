@@ -86,10 +86,6 @@ alias tree="eza --git-ignore --tree"
 alias cat='bat --plain --theme=TwoDark'
 alias ogcat='command cat'
 
-## ping -> prettyping
-## https://github.com/denilsonsa/prettyping
-alias ping='prettyping'
-
 # Lazygit
 alias lg="lazygit"
 # The next two mirror the nvim keybindings for invoking lazygit
