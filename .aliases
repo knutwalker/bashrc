@@ -220,3 +220,4 @@ alias rcopy-all="rsync -Phav"
 
 # serve local directory
 alias serve="miniserve --index index.html ."
+alias serve-from="miniserve --index index.html"
